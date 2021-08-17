@@ -45,15 +45,15 @@
         </div>
     </section>
     <!--main-->
-    <section class="section is-medium">
-        <div class="columns" id="tareas">
+    <section class="section is-medium" id="tareas">
+        <div class="columns" id="tarea">
             <div class="column">
               <h2>My homeworks pending:</h2>
-              <div class="content is large">
-                <ol type="1">
+              <div class="content">
+                <ol type="1" class="lista">
                   <li>
                       <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" class="frases">
                         Text
                       </label>
                   </li>
@@ -68,12 +68,12 @@
                       <input type="checkbox">
                       Text
                     </label>
-                </li>
+                  </li>
                 </ol>
               </div>
-              <div class="buttons are-medium">
-                <button class="button">Move to process</button>
-                <button class="button">Delect</button>
+              <div class="buttons is-right">
+                <button class="button is-primary">Move to process</button>
+                <button class="button is-danger">Delect</button>
               </div>
             </div>
             <div class="column">
@@ -100,9 +100,9 @@
                   </li>
                   </ol>
                 </div>
-                <div class="buttons are-medium">
-                    <button class="button">Move to done</button>
-                    <button class="button">Delect</button>
+                <div class="buttons is-right">
+                    <button class="button is-primary">Move to done</button>
+                    <button class="button is-danger">Delect</button>
                 </div>
             </div>
             <div class="column">
@@ -129,8 +129,8 @@
                   </li>
                   </ol>
                 </div>
-                <div class="buttons are-medium">
-                    <button class="button">Delect</button>
+                <div class="buttons is-right">
+                    <button class="button is-danger">Delect</button>
                 </div>
             </div>
         </div>

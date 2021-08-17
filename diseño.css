@@ -1,6 +1,12 @@
 *{
     font-family: roboto;
 }
+:root{
+    --color1: hsl(171, 100%, 41%);
+    --color2: hsl(217, 71%, 53%);
+    --color3: #EBF1F2;
+    --color4: #F2B2AC;
+}
 /*titulo*/
 #section h1{
     text-align: center;
@@ -103,11 +109,34 @@
     }
 }
 /*tareas*/
-#tareas .column{
-    border: 1rem solid yellow;
-    background-color: cadetblue;
+#tarea .column{
+    border: 0.5rem solid var(--color2);
+    background-color: var(--color3);
     margin-right: 1rem;
+    border-radius: 5px;
 }
+#tarea .column:last-child{
+    margin-right: 0rem;
+}
+#tareas{
+    padding-top: 3rem;
+}
+#tareas h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+#tareas .frases{
+    font-size: 1rem;
+}
+#tareas .buttons{
+    margin-bottom: -1rem;
+    padding-top: 5rem;
+}
+
+
+
+
 /*palabras*/
 #palabras1 .column{
     border: 1rem solid red;
