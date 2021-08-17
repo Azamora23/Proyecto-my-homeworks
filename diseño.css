@@ -118,8 +118,8 @@
 #tarea .column:last-child{
     margin-right: 0rem;
 }
-#tareas{
-    padding-top: 3rem;
+ #tareas{
+   padding: 3rem 1.5rem 3rem;
 }
 #tareas h2{
     font-size: 1.5rem;
@@ -133,16 +133,21 @@
     margin-bottom: -1rem;
     padding-top: 5rem;
 }
-
-
-
-
 /*palabras*/
+#palabras1{
+    padding-top: 1rem;
+}
 #palabras1 .column{
-    border: 1rem solid red;
-    background-color: royalblue;
+    border: 0.5rem solid var(--color2);
+    background-color: var(--color1);
     text-align: center;
     font-weight: bold;
+    color: white;
+    border-radius: 5px;
 }
-
+/*footer*/
+#footer{
+    padding: 1rem 1.5rem 1rem;
+    background-color: var(--color3);
+}
 
