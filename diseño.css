@@ -1,19 +1,153 @@
+*{
+    font-family: roboto;
+}
+:root{
+    --color1: hsl(171, 100%, 41%);
+    --color2: hsl(217, 71%, 53%);
+    --color3: #EBF1F2;
+    --color4: #F2B2AC;
+}
 /*titulo*/
 #section h1{
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3rem;
+}
+/*fondo*/
+.figura{
+    overflow: hidden;
+}
+.figura li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+.figura li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+.figura li:nth-child(2){
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+.figura li:nth-child(3){
+    left: 70%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 4s;
+}
+.figura li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+.figura li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+.figura li:nth-child(6){
+    left: 75%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 3s;
+    animation-duration: 3s;
+}
+.figura li:nth-child(7){
+    left: 35%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 3s;
+    animation-duration: 3s;
+}
+.figura li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 3s;
+}
+.figura li:nth-child(9){
+    left: 20%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+.figura li:nth-child(10){
+    left: 85%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+    animation-duration: 4s;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
 }
 /*tareas*/
-#tareas .column{
-    border: 1rem solid yellow;
-    background-color: cadetblue;
+#tarea .column{
+    border: 0.5rem solid var(--color2);
+    background-color: var(--color3);
     margin-right: 1rem;
+    border-radius: 5px;
+}
+#tarea .column:last-child{
+    margin-right: 0rem;
+}
+ #tareas{
+   padding: 3rem 1.5rem 3rem;
+}
+#tareas h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+#tareas .frases{
+    font-size: 1rem;
+}
+#tareas .buttons{
+    margin-bottom: -1rem;
+    padding-top: 5rem;
 }
 /*palabras*/
+#palabras1{
+    padding-top: 1rem;
+}
 #palabras1 .column{
-    border: 1rem solid red;
-    background-color: royalblue;
+    border: 0.5rem solid var(--color2);
+    background-color: var(--color1);
     text-align: center;
     font-weight: bold;
+    color: white;
+    border-radius: 5px;
 }
-
+/*footer*/
+#footer{
+    padding: 1rem 1.5rem 1rem;
+    background-color: var(--color3);
+}
 
