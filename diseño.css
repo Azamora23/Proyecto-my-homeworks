@@ -109,11 +109,10 @@
     }
 }
 /*tareas*/
-#tarea .column{
-    border: 0.5rem solid var(--color2);
-    background-color: var(--color3);
-    margin-right: 1rem;
-    border-radius: 5px;
+#tarea1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #tarea .column:last-child{
     margin-right: 0rem;
