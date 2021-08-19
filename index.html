@@ -20,7 +20,7 @@
           </h1><br>
           <div class="field has-addons has-addons-centered">
             <div class="control">
-              <input class="input is-large" type="text" placeholder="Add homeworks" id="ingresarTarea">
+              <input class="input is-large" type="text" placeholder="Add homeworks" id="ingresarTarea" autofocus>
             </div>
             <div class="control" id="enviar">
               <a class="button is-info is-large">
@@ -49,70 +49,34 @@
         <div class="columns" id="tarea">
             <div class="column">
               <h2>My homeworks pending:</h2>
-              <div class="content">
-                <ol type="1" class="lista">
-                </ol>
-              </div>
-              <div class="buttons is-right">
-                <button class="button is-primary">Move to process</button>
-                <button class="button is-danger">Delect</button>
-              </div>
+              <div id="listaTareas"></div>
+              <template id="tareasPendientes">
+                <article class="message is-info" id="tarea1">
+                  <div class="message-body">
+                    <p> a traves del campo </p>
+                  </div>
+                  <div>  
+                    <span class="icon has-text-success">
+                      <i class="fas fa-check-square"></i>
+                    </span>
+                    <span class="icon has-text-danger">
+                      <i class="fas fa-trash-alt"></i>
+                    </span>
+                  </div>
+                </article>
+              </template>
             </div>
             <div class="column">
                 <h2>My homeworks in process:</h2>
                 <div class="content">
-                  <ol type="1">
-                    <li>
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Text
-                        </label>
-                    </li>
-                    <li>
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        Text
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        Text
-                      </label>
-                  </li>
-                  </ol>
-                </div>
-                <div class="buttons is-right">
-                    <button class="button is-primary">Move to done</button>
-                    <button class="button is-danger">Delect</button>
+                  
+                
                 </div>
             </div>
             <div class="column">
                 <h2>My homeworks done:</h2>
                 <div class="content">
-                  <ol type="1">
-                    <li>
-                        <label class="checkbox">
-                          <input type="checkbox">
-                          Text
-                        </label>
-                    </li>
-                    <li>
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        Text
-                      </label>
-                    </li>
-                    <li>
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        Text
-                      </label>
-                  </li>
-                  </ol>
-                </div>
-                <div class="buttons is-right">
-                    <button class="button is-danger">Delect</button>
+                  
                 </div>
             </div>
         </div>
@@ -154,5 +118,6 @@
         </div>
     </footer>
  <script src="interactivo.js"></script>
+ <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script><!--iconos-->
 </body>
 </html>
