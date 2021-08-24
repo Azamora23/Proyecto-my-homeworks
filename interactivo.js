@@ -15,12 +15,8 @@ function sumarTareaPendiente(){
             <p> </p>
         </div>
         <div>  
-            <span class="icon has-text-success">
-            <button><i class="fas fa-check-square fa-2x"></i></button>
-            </span>
-            <span class="icon has-text-danger">
-            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x" role="button"></i></button>
-            </span>
+            <button class="enProceso"><i class="fas fa-check-square fa-2x"></i></button>
+            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i></button>
         </div>
         </article>
     </article>`
@@ -29,7 +25,7 @@ function sumarTareaPendiente(){
   
     var texto = tareaPendiente.querySelector("p")
     texto.textContent = tarea.value
-    
+        
     tarea.focus()
     tarea.value = ""
   
