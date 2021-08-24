@@ -1,58 +1,45 @@
-//ingresar tareas y agregar a pendientes
-var tarea = document.getElementById("ingresarTarea");
-var listaTarea = document.getElementById("listaTareas");
-var template = document.getElementById("tareasPendientes").content;
-var fragment = document.createDocumentFragment();
-var boton = document.getElementById("enviar");
-var sumarTareas = {
+var boton = document.getElementById("enviar")
+var tarea = document.getElementById("ingresarTarea")
+var listaTareas = document.getElementById("listaTareas")
+//generar lista de tareas pendientes
+boton.addEventListener("click", sumarTareaPendiente)
+function sumarTareaPendiente(){
+    var tareaPendiente = document.createElement("article")
+    var texto = document.createElement("p")
+    tareaPendiente.classList.add("tareaPendiente")
+            
+    tareaPendiente.innerHTML =  `
+    <article id="tareasPendientes" class="tareaPendiente">
+        <article class="message is-info" id="tarea1">
+        <div class="message-body">
+            <p> </p>
+        </div>
+        <div>  
+            <span class="icon has-text-success">
+            <button><i class="fas fa-check-square fa-2x"></i></button>
+            </span>
+            <span class="icon has-text-danger">
+            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x" role="button"></i></button>
+            </span>
+        </div>
+        </article>
+    </article>`
     
-}
-
-boton.addEventListener("click", agregarTarea)
-function agregarTarea(){
-    if(tarea === ""){
-        console.log("esta vacio")
-        return
-    }
-    var sumarTarea = {
-        id: Date.now(),
-        texto: tarea.value,
-        estado: false
-    }
+    listaTareas.appendChild(tareaPendiente)
+  
+    var texto = tareaPendiente.querySelector("p")
+    texto.textContent = tarea.value
     
-    sumarTareas[sumarTarea.id] = sumarTarea
-    tarea.value = ""
     tarea.focus()
-
-    colorTareas()
-}
-
-var colorTareas = () => {
-    listaTarea.innerHTML = ""
-    Object.values(sumarTareas).forEach(sumarTarea => {
-       var clone = template.cloneNode(true)
-       clone.querySelector('p').textContent = sumarTarea.texto
-       fragment.appendChild(clone)
-    })
-    listaTarea.appendChild(fragment)
-    
+    tarea.value = ""
+  
+    //boton eliminar
+    var botonEliminar = tareaPendiente.querySelector(".eliminar")
+    botonEliminar.addEventListener("click", eliminarTarea)
+    function eliminarTarea(){
+        tareaPendiente.remove()
+    }
 }
 
 
-
-
-
-    /*var nuevaTarea = ingresarTarea.value
-    var li = document.createElement("li")
-    var input = document.createElement("input")
-    input.setAttribute("type", "checkbox")
-    var label = document.createElement("label")
     
-    label.textContent = nuevaTarea
-    
-    tareas.appendChild(li)
-    tareas.appendChild(input)
-    tareas.appendChild(label)
-
-    tarea.value = ""*/
-

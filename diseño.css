@@ -125,12 +125,8 @@
     font-weight: bold;
     text-align: center;
 }
-#tareas .frases{
-    font-size: 1rem;
-}
-#tareas .buttons{
-    margin-bottom: -1rem;
-    padding-top: 5rem;
+#tareas p{
+    font-size: 1.2rem;
 }
 /*palabras*/
 #palabras1{
