@@ -1,6 +1,7 @@
 var boton = document.getElementById("enviar")
 var tarea = document.getElementById("ingresarTarea")
 var listaTareas = document.getElementById("listaTareas")
+
 //generar lista de tareas pendientes
 boton.addEventListener("click", sumarTareaPendiente)
 function sumarTareaPendiente(){
@@ -10,7 +11,7 @@ function sumarTareaPendiente(){
             
     tareaPendiente.innerHTML =  `
     <article id="tareasPendientes" class="tareaPendiente">
-        <article class="message is-info" id="tarea1">
+        <article class="message" id="tarea1">
         <div class="message-body">
             <p> </p>
         </div>
@@ -22,7 +23,7 @@ function sumarTareaPendiente(){
     </article>`
     
     listaTareas.appendChild(tareaPendiente)
-  
+    //obtener texto 
     var texto = tareaPendiente.querySelector("p")
     texto.textContent = tarea.value
         
@@ -35,7 +36,23 @@ function sumarTareaPendiente(){
     function eliminarTarea(){
         tareaPendiente.remove()
     }
+    //boton mover a hecho
+    var listaProcesos = document.getElementById("listaProceso")
+    var botonProceso = tareaPendiente.querySelector(".enProceso")
+    botonProceso.addEventListener("click", moverProceso)
+    function moverProceso(){
+        listaProcesos.appendChild(tareaPendiente)
+        
+        var botonSuprimir = document.querySelector(".enProceso")
+        botonSuprimir.style.display = "none"
+    }
 }
+
+
+
+
+
+
 
 
     
