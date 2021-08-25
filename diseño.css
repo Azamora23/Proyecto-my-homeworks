@@ -114,6 +114,17 @@
     justify-content: space-between;
     align-items: center;
 }
+.tareaPendiente{
+    margin-bottom: 1rem;
+}
+.eliminar{
+    color: red;
+    border: none;
+}
+.enProceso{
+    color: yellow;
+    border: none;
+}
 #tarea .column:last-child{
     margin-right: 0rem;
 }
@@ -125,12 +136,8 @@
     font-weight: bold;
     text-align: center;
 }
-#tareas .frases{
-    font-size: 1rem;
-}
-#tareas .buttons{
-    margin-bottom: -1rem;
-    padding-top: 5rem;
+#tareas p{
+    font-size: 1.2rem;
 }
 /*palabras*/
 #palabras1{
