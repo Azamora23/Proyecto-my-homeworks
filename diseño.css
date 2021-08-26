@@ -5,13 +5,18 @@
     --color1: hsl(171, 100%, 41%);
     --color2: hsl(217, 71%, 53%);
     --color3: #EBF1F2;
-    --color4: #F2B2AC;
+    --color4: hsl(48, 100%, 67%);
 }
 /*titulo*/
 #section h1{
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
     font-size: 3rem;
+}
+
+.hero-body .emoticon{
+    padding-left: 5rem;
+    color: var(--color4);
 }
 /*fondo*/
 .figura{
