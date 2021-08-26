@@ -14,19 +14,20 @@
 <body>
     <!--Header-->
     <section class="hero is-primary" id="section">
-        <div class="hero-body">
-          <h1 class="title">
-              MY HOMEWORKS
-          </h1><br>
-          <div class="field has-addons has-addons-centered">
-            <div class="control">
-              <input class="input is-large" type="text" placeholder="Add homeworks" id="ingresarTarea" autofocus>
+        <div class="hero-body" id="hero">
+            <h1 class="title">
+              <i class="fas fa-laugh-squint fa-2x" id="emoticon"></i>
+                MY HOMEWORKS
+            </h1><br>
+            <div class="field has-addons has-addons-centered">
+              <div class="control">
+                <input class="input is-large" type="text" placeholder="Add homeworks" id="ingresarTarea" autofocus>
+              </div>
+              <div class="control" id="enviar">
+                <a class="button is-info is-large">
+                  Send
+                </a>
             </div>
-            <div class="control" id="enviar">
-              <a class="button is-info is-large">
-                Send
-              </a>
-          </div>
         </div>
         <!--figuras header-->
         <div>
@@ -47,8 +48,8 @@
     <!--main-->
     <section class="section is-medium" id="tareas">
         <div class="columns" id="tarea">
-            <div class="column">
-              <article class="message is-link">
+            <div class="column is-5">
+              <article class="message is-link" id="cajaTareasPendientes">
                 <div class="message-header">
                   <h2>My homeworks pending:</h2>
                 </div>
@@ -66,45 +67,45 @@
                 </article>
               </article>-->
             </div>
-            <div class="column">
-              <article class="message is-warning">
+            <div class="column is-5">
+              <article class="message is-warning" id="cajaTareasHechas">
                 <div class="message-header">
                   <h2>My homeworks done:</h2>
                 </div>
               </article>
               <div id="listaProceso"></div>
             </div>
-           
+            <div class="column is-2">
+              <aside class="section" id="palabras1">
+                <div class="columns" id="palabras">
+                    <div class="column" style="background-color: hsl(48, 100%, 67%);">
+                      ¡Fun!
+                    </div>
+                    <div class="column  is-offset-1" style="background-color: hsl(217, 71%, 53%);">
+                      ¡Smile!
+                    </div>
+                    <div class="column" style="background-color: hsl(48, 100%, 67%);">
+                      ¡Innovate!
+                    </div>
+                    <div class="column is-offset-1" style="background-color: hsl(217, 71%, 53%);">
+                      ¡Brave!
+                    </div>
+                </div>
+                <div class="columns" id="palabras2">
+                    <div class="column" style="background-color: hsl(48, 100%, 67%);">
+                      ¡Happy!
+                    </div>
+                    <div class="column is-offset-1" style="background-color: hsl(217, 71%, 53%);">
+                      ¡Learn!
+                    </div>
+                    <div class="column" style="background-color: hsl(48, 100%, 67%);">
+                      ¡Discipline!
+                    </div>
+                </div>
+              </aside>  
+            </div>
         </div>
     </section>  
-    <!--articul-->
-    <section class="section" id="palabras1">
-        <div class="columns">
-            <div class="column">
-              ¡Fun!
-            </div>
-            <div class="column">
-              ¡Smile!
-            </div>
-            <div class="column">
-              ¡Innovate!
-            </div>
-            <div class="column">
-              ¡Brave!
-            </div>
-        </div>
-        <div class="columns" id="palabras2">
-            <div class="column">
-              ¡Happy!
-            </div>
-            <div class="column">
-              ¡Learn!
-            </div>
-            <div class="column">
-              ¡Discipline!
-            </div>
-        </div>
-    </section>
     <!--footer-->
     <footer class="footer" id="footer">
         <div class="content has-text-centered">

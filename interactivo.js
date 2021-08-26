@@ -23,12 +23,13 @@ function sumarTareaPendiente(){
     </article>`
     
     listaTareas.appendChild(tareaPendiente)
-    //obtener texto 
+      
     var texto = tareaPendiente.querySelector("p")
     texto.textContent = tarea.value
         
     tarea.focus()
     tarea.value = ""
+    
   
     //boton eliminar
     var botonEliminar = tareaPendiente.querySelector(".eliminar")
@@ -42,9 +43,6 @@ function sumarTareaPendiente(){
     botonProceso.addEventListener("click", moverProceso)
     function moverProceso(){
         listaProcesos.appendChild(tareaPendiente)
-        
-        var botonSuprimir = document.querySelector(".enProceso")
-        botonSuprimir.style.display = "none"
     }
 }
 
