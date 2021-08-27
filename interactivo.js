@@ -16,8 +16,8 @@ function sumarTareaPendiente(){
             <p> </p>
         </div>
         <div>
-            <button class="enProceso"><i class="fas fa-check-square fa-2x"></i>Mover</button>
-            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i>Eliminar</button>
+            <button class="enProceso"><i class="fas fa-check-square fa-2x"></i>Move</button>
+            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i>Delect</button>
         </div>
         </article>
     </article>`
@@ -44,7 +44,9 @@ function sumarTareaPendiente(){
     function moverProceso(){
         listaProcesos.appendChild(tareaPendiente)
     }
+        
 }
+
 
 
 
