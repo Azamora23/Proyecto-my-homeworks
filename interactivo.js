@@ -15,9 +15,9 @@ function sumarTareaPendiente(){
         <div class="message-body">
             <p> </p>
         </div>
-        <div>  
-            <button class="enProceso"><i class="fas fa-check-square fa-2x"></i></button>
-            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i></button>
+        <div>
+            <button class="enProceso"><i class="fas fa-check-square fa-2x"></i>Mover</button>
+            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i>Eliminar</button>
         </div>
         </article>
     </article>`
