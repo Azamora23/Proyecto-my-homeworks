@@ -17,7 +17,7 @@ function sumarTareaPendiente(){
         </div>
         <div>
             <button class="enProceso"><i class="fas fa-check-square fa-2x"></i>Move</button>
-            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i>Delect</button>
+            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i>Delete</button>
         </div>
         </article>
     </article>`
@@ -35,7 +35,19 @@ function sumarTareaPendiente(){
     var botonEliminar = tareaPendiente.querySelector(".eliminar")
     botonEliminar.addEventListener("click", eliminarTarea)
     function eliminarTarea(){
-        tareaPendiente.remove()
+        swal.fire({
+            title: "Are you sure to delete this homework?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete",
+            cancelButtonText: "Cancel",
+            confirmButtonColor: "hsl(217, 71%, 53%)",
+          })
+          .then(resultado => {
+            if (resultado.value) {
+                tareaPendiente.remove()
+            } 
+        });
     }
     //boton mover a hecho
     var listaProcesos = document.getElementById("listaProceso")
