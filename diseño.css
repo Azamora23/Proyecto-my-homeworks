@@ -155,9 +155,15 @@
     color: #B10202;
     border: none;
 }
+.eliminar:hover{
+    cursor: pointer;
+}
 .enProceso{
     color: var(--color4);
     border: none;
+}
+.enProceso:hover{
+    cursor: pointer;
 }
 #tarea .column:last-child{
     margin-right: 0rem;
@@ -185,6 +191,18 @@
     font-weight: bold;
     color: white;
     border-radius: 5px;
+}
+#palabras1 .column:hover{
+    animation: balanceo 2s linear infinite;
+
+}
+@keyframes balanceo {
+    0% {
+        transform: rotateX(30deg);
+    }
+    100%{
+        transform: rotateY(-30deg);
+    }
 }
 /*footer*/
 #footer{
