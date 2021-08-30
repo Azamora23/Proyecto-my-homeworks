@@ -13,7 +13,7 @@ function sumarTareaPendiente(){
     <article id="tareasPendientes" class="tareaPendiente">
         <article class="message" id="tarea1">
         <div class="message-body">
-            <p> </p>
+            <p class="textoIngresado"> </p>
         </div>
         <div>
             <button class="enProceso"><i class="fas fa-check-square fa-2x"></i>Move</button>
@@ -26,9 +26,10 @@ function sumarTareaPendiente(){
       
     var texto = tareaPendiente.querySelector("p")
     texto.textContent = tarea.value
-        
+            
     tarea.focus()
     tarea.value = ""
+    guardarTareas()
     
   
     //boton eliminar
@@ -42,10 +43,12 @@ function sumarTareaPendiente(){
             confirmButtonText: "Yes, delete",
             cancelButtonText: "Cancel",
             confirmButtonColor: "hsl(217, 71%, 53%)",
+
           })
           .then(resultado => {
             if (resultado.value) {
                 tareaPendiente.remove()
+                guardarTareas()
             } 
         });
     }
@@ -56,8 +59,20 @@ function sumarTareaPendiente(){
     function moverProceso(){
         listaProcesos.appendChild(tareaPendiente)
     }
-        
+    
+    //almacenamiento local
+    function guardarTareas(){
+        var tareasActuales = document.querySelectorAll(".textoIngresado")
+        var tareasAguardar = []
+
+        for(var i = 0; i < tareasActuales.length; i++){
+            tareasAguardar.push(tareasActuales[i].textContent)
+        }
+        localStorage.setItem("tareas", JSON.stringify(tareasAguardar))
+
+    }
 }
+       
 
 
 
