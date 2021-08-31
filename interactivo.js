@@ -16,8 +16,7 @@ function sumarTareaPendiente(txt){
             <p class="textoIngresado"> </p>
         </div>
         <div>
-            <button class="enProceso"><i class="fas fa-check-square fa-2x"></i>Move</button>
-            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i>Delete</button>
+            <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i></button>
         </div>
         </article>
     </article>`
@@ -52,13 +51,6 @@ function sumarTareaPendiente(txt){
             } 
         });
     }
-    //boton mover a hecho
-    var listaProcesos = document.getElementById("listaProceso")
-    var botonProceso = tareaPendiente.querySelector(".enProceso")
-    botonProceso.addEventListener("click", moverProceso)
-    function moverProceso(mover){
-        listaProcesos.appendChild(tareaPendiente)
-    }
     //hidratar tarea si hay contenido
     if(typeof txt === "string"){
         texto.textContent = txt
@@ -81,9 +73,14 @@ if((tareasGuardadas)){
     tareasGuardadas.forEach(function(trea) {
         sumarTareaPendiente(trea)
     });
-    
 }
-
+//obtener cantidad de tareas pendientes
+var cantidad = document.getElementsByClassName("tareaPendiente").length/2
+document.getElementById("numero").innerHTML = cantidad 
+//actulizacion de cantidad de tareas
+function actualizarCantidad(){
+    window.location.reload();
+} 
 
 
 
