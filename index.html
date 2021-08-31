@@ -48,10 +48,12 @@
     <!--main-->
     <section class="section is-medium" id="tareas">
         <div class="columns" id="tarea">
-            <div class="column is-5">
+            <div class="column is-10">
               <article class="message is-link" id="cajaTareasPendientes">
                 <div class="message-header">
                   <h2>My homeworks pending:</h2>
+                  <h2 id="numero"></h2>
+                  <button class="button is-warning" type="button" onClick="actualizarCantidad()">Refresh amount</button>
                 </div>
               </article>
               <div id="listaTareas"></div>
@@ -61,19 +63,10 @@
                     <p> </p>
                   </div>
                   <div>
-                    <button id="enProceso"><i class="fas fa-check-square fa-2x"></i></button>
                     <button class="eliminar" id="borrar"><i class="fas fa-trash-alt fa-2x"></i></button>
                   </div>
                 </article>
               </article>-->
-            </div>
-            <div class="column is-5">
-              <article class="message is-warning" id="cajaTareasHechas">
-                <div class="message-header">
-                  <h2>My homeworks done:</h2>
-                </div>
-              </article>
-              <div id="listaProceso"></div>
             </div>
             <div class="column is-2">
               <aside class="section" id="palabras1">
