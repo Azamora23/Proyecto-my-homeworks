@@ -4,7 +4,7 @@ var listaTareas = document.getElementById("listaTareas")
 
 //generar lista de tareas pendientes
 boton.addEventListener("click", sumarTareaPendiente)
-function sumarTareaPendiente(){
+function sumarTareaPendiente(txt){
     var tareaPendiente = document.createElement("article")
     var texto = document.createElement("p")
     tareaPendiente.classList.add("tareaPendiente")
@@ -56,25 +56,33 @@ function sumarTareaPendiente(){
     var listaProcesos = document.getElementById("listaProceso")
     var botonProceso = tareaPendiente.querySelector(".enProceso")
     botonProceso.addEventListener("click", moverProceso)
-    function moverProceso(){
+    function moverProceso(mover){
         listaProcesos.appendChild(tareaPendiente)
     }
-    
-    //almacenamiento local
-    function guardarTareas(){
-        var tareasActuales = document.querySelectorAll(".textoIngresado")
-        var tareasAguardar = []
-
-        for(var i = 0; i < tareasActuales.length; i++){
-            tareasAguardar.push(tareasActuales[i].textContent)
-        }
-        localStorage.setItem("tareas", JSON.stringify(tareasAguardar))
-
+    //hidratar tarea si hay contenido
+    if(typeof txt === "string"){
+        texto.textContent = txt
     }
 }
-       
+//almacenamiento local
+function guardarTareas(){
+    var tareasActuales = document.querySelectorAll(".textoIngresado")
+    var tareasAguardar = []
 
+    for(var i = 0; i < tareasActuales.length; i++){
+        tareasAguardar.push(tareasActuales[i].textContent)
+    }
+    localStorage.setItem("tareas", JSON.stringify(tareasAguardar))
+}
+//recuperar tareas almacenadas
+var tareasGuardadas = JSON.parse(localStorage.getItem("tareas"))
 
+if((tareasGuardadas)){
+    tareasGuardadas.forEach(function(trea) {
+        sumarTareaPendiente(trea)
+    });
+    
+}
 
 
 
