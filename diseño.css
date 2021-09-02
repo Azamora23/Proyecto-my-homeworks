@@ -1,5 +1,5 @@
 *{
-    font-family: roboto;
+    font-family: roboto, sans-serif;
 }
 :root{
     --color1: hsl(171, 100%, 41%);
